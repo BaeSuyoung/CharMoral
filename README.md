@@ -12,7 +12,7 @@ Full paper is available here: <https://aclanthology.org/> (To be appear.)
 ---
 
 ### Overview
-**The *CharMoral* dataset is available at [Link](https://drive.google.com/drive/folders/1EjE9pwxGMIIQ_AZTryoy6CmNoXOnxhn8).** It contains 103,836 morality annotated dataset with character's extracted action and surrounding contexts. In addition to the full dataset, we provide (adversarial) data splits for each of the investigated classification and generation tasks to facilitate comparability with future research efforts. For details regarding data collection and fine-grained corpus properties, please refer to **Section 3.5** of the paper. 
+**The *CharMoral* dataset is available at [dataset](https://drive.google.com/drive/folders/1rkJIh0oQ5CaVIegVzHWM7fuW0CRKSECW).** It contains 103,836 morality annotated dataset with character's extracted action and surrounding contexts. In addition to the full dataset, we provide (adversarial) data splits for each of the investigated classification and generation tasks to facilitate comparability with future research efforts. For details regarding data collection and fine-grained corpus properties, please refer to **Section 3.5** of the paper. 
 
 ### Story examples
 - All datasets are stored in `.csv` or `.tsv` format.
@@ -51,6 +51,7 @@ Full paper is available here: <https://aclanthology.org/> (To be appear.)
 - **situation**: Situation sentence regarding the action.
 - **intention**: Intention sentence regarding the action.
 - **consequence**: Consequence sentence regarding the action.
+- **SICA**: The logit score predicted by the MAD model fine-tuned with the SICA input setting.
 - **label**: The action morality label predicted by MAD. `0` if the action is immoral; otherwise, `1`.
 - **split**: The information of dataset split, train, valid, or test.
 
@@ -80,7 +81,7 @@ python -m spacy download en
 4. Context Extraction
 5. Morality Prediction Using MAD
   - for MAD fine-tuning : run run <code>bash train_cls.sh</code>
-    - If you want to skip fine-tuning process, download [LINK](link) and place it to <code>output/</code> folder
+    - If you want to skip fine-tuning process, download [model_checkpoint](https://drive.google.com/drive/folders/1kgccHy0lML4sQV7Z-LZ8TtS-wl1ujllj) and place it to <code>output/</code> folder
     - The final MAD model checkpoint we used in this paper is <code>output/moral_stories/SICA/bert/checkpoint-SICA-7200</code>
 
     ```
