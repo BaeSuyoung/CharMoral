@@ -18,12 +18,7 @@ Full paper is available here: <https://aclanthology.org/> (To be appear.)
 - All datasets are stored in `.csv` or `.tsv` format.
 
 ```
-{'label': 0,
-'consequence': 'As a result of [mask]'s attack, Clark is momentarily distracted, which ultimately leads to his death at the hands of a US Marine sentry.',
-'situation': 'Annette and Clark travel to the United States Naval Academy to ambush [mask] as he's leaving work, creating a tense environment where [mask] feels threatened.',
-'intention': '[mask] intends to defend himself against Clark's impending attack by taking the initiative to attack first.',
-'action': '[mask] attacks him first.',
-'mid': 0,
+{'mid': 0,
 'sid': 12,
 'movie_id': 'tt0105112',
 'genre': ['Action', 'Thriller'],
@@ -31,11 +26,34 @@ Full paper is available here: <https://aclanthology.org/> (To be appear.)
 'plot_synopsis_len': 1492,
 'plot_synopsis_cvt': 1492,
 'segment_token_len': 155,
-'segment': 'Annette and [Clark] travel to the United States Naval Academy to ambush [Ryan] as he's leaving work. [Ryan] notices [Clark] idling nearby. [Clark] casually walks away, but [Ryan] clearly unnerved, then gets even more nervous as he hears a car engine starting. His suspicions are well warranted as he continues walking down the street, he looks in the reflection of a parked van's rearview door and sees that [Clark], and the stolen car driven by Annette, are following him. [Ryan] pretends not to see them until he's walking past a parked panel truck, at which point he ducks behind the truck. [Clark] draws a silenced pistol and prepares to corner [Ryan], but [Ryan] attacks him first. [Clark] quickly gets the upper hand and throws [Ryan] to the curb. He grabs his pistol and is about to shoot [Ryan] when he's shot dead himself by a US Marine sentry. Annette quickly drives away in her Jeep.',
 'segment_char': 'Ryan',
+'segment': 'Annette and [Clark] travel to the United States Naval Academy to ambush [Ryan] as he's leaving work. [Ryan] notices [Clark] idling nearby. [Clark] casually walks away, but [Ryan] clearly unnerved, then gets even more nervous as he hears a car engine starting. His suspicions are well warranted as he continues walking down the street, he looks in the reflection of a parked van's rearview door and sees that [Clark], and the stolen car driven by Annette, are following him. [Ryan] pretends not to see them until he's walking past a parked panel truck, at which point he ducks behind the truck. [Clark] draws a silenced pistol and prepares to corner [Ryan], but [Ryan] attacks him first. [Clark] quickly gets the upper hand and throws [Ryan] to the curb. He grabs his pistol and is about to shoot [Ryan] when he's shot dead himself by a US Marine sentry. Annette quickly drives away in her Jeep.',
+'action': '[mask] attacks him first.',
+'situation': 'Annette and Clark travel to the United States Naval Academy to ambush [mask] as he's leaving work, creating a tense environment where [mask] feels threatened.',
+'intention': '[mask] intends to defend himself against Clark's impending attack by taking the initiative to attack first.',
+'consequence': 'As a result of [mask]'s attack, Clark is momentarily distracted, which ultimately leads to his death at the hands of a US Marine sentry.',
 'SICA': 4.3724417e-06,
+'label': 0,
 'split': 'train'}
 ```
+
+- **mid**: The unique movie ID sequentially ordered starting from 0.
+- **sid**: The segment ID for each story is assigned after event-centric story segmentation. The sids are sequentially ordered starting from 0.
+- **movie_id**: The unique movie ID originally assigned by IMDB.
+- **genre**: The genre information for each narrative is stored as a list.
+- **rating**: Each story in the dataset has a rating from IMDB, with values ranging between 0 and 10.
+- **plot_synopsis_len**: The length of entire story corresponding to the *mid*.
+- **plot_synopsis_cvt**: The length of entire story corresponding to the *mid* after applying preprocessing.
+- **segment_token_len**: The length of each segment corresponding to the *sid*.
+- **segment_char**: The name of the character who is the subject of the extracted action in the segment. The character name corresponds to the *[mask]* position in the column sentences of action, situation, intention, and consequence.
+- **segment**: The segment content corresponding to the *sid*.
+- **action**: Action sentence extracted from the segment.
+- **situation**: Situation sentence regarding the action.
+- **intention**: Intention sentence regarding the action.
+- **consequence**: Consequence sentence regarding the action.
+- **label**: The action morality label predicted by MAD. `0` if the action is immoral; otherwise, `1`.
+- **split**: The information of dataset split, train, valid, or test.
+
 ---
 
 ## Step0: Dataset Download
