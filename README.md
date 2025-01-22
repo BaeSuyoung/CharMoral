@@ -202,8 +202,29 @@ python -m spacy download en
 
 ---
 
-## Citation (To be appear)
+## Citation
 
 ```
+@inproceedings{bae-etal-2025-charmoral,
+    title = "{C}har{M}oral: A Character Morality Dataset for Morally Dynamic Character Analysis in Long-Form Narratives",
+    author = "Bae, Suyoung  and
+      Cho, Gunhee  and
+      Cheong, Yun-Gyung  and
+      Li, Boyang",
+    editor = "Rambow, Owen  and
+      Wanner, Leo  and
+      Apidianaki, Marianna  and
+      Al-Khalifa, Hend  and
+      Eugenio, Barbara Di  and
+      Schockaert, Steven",
+    booktitle = "Proceedings of the 31st International Conference on Computational Linguistics",
+    month = jan,
+    year = "2025",
+    address = "Abu Dhabi, UAE",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.coling-main.589/",
+    pages = "8809--8818",
+    abstract = "This paper introduces CharMoral, a dataset designed to analyze the moral evolution of characters in long-form narratives. CharMoral, built from 1,337 movie synopses, includes annotations for character actions, context, and morality labels. To automatically construct CharMoral, we propose a four-stage framework, utilizing Large Language Models, to automatically classify actions as moral or immoral based on context. Human evaluations and various experiments confirm the framework`s effectiveness in moral reasoning tasks in multiple genres. Our code and the CharMoral dataset are publicly available at https://github.com/BaeSuyoung/CharMoral."
+}
 
 ```
