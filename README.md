@@ -5,7 +5,7 @@
 </p>
 
 Our paper was accepted to COLING 2025.  
-Full paper is available here: <https://aclanthology.org/> (To be appear.)
+Full paper is available here: <https://aclanthology.org/2025.coling-main.589/>
 
 **Abstract**: This paper introduces CharMoral, a dataset designed to analyze the moral evolution of characters in long-form narratives. **CharMoral**, built from 1,337 movie synopses, includes annotations for character actions, context, and morality labels. To automatically construct CharMoral, we propose a four-stage framework, utilizing Large Language Models, to automatically classify actions as moral or immoral based on context. Human evaluations and various experiments confirm the framework’s effectiveness in moral reasoning tasks in multiple genres.
 
